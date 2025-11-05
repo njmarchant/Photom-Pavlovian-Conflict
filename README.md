@@ -1,5 +1,15 @@
-MATLAB files take data from TDT saved tanks
-BTN_1_ extracts the data and divides them into traces based on the timestamps saved by TDT
-BTN_2_ sorts traces and combines them where necessary. It also performs z-scoring of the traces
-BTN_3_ The main plotting scripts. The collect the relevant data for a given trial type, performs the statistics, and plots these as output
-BTN_4_ Calculates mean of the zScore traces in defined time windows
+# Photometry Pavlovian Conflict
+Matlab scripts used to Analyse photometry recordings from LH-GABA neurons during Pavlovian conflict tasks
+
+> **Associated Publication:**
+> Title: Dual Role of LH-GABA Neurons in Encoding Alcohol Reward and Aversive Memories
+> Authors: Isis Alonso-Lozares, Dustin Schetters, Yvar van Mourik, Allison J. McDonald, Taco J. De Vries, Nathan J. Marchant
+> Journal: The Journal of Neuroscience
+> Year: 2025
+> DOI: https://doi.org/10.1101/2025.10.22.683984
+
+This repository contains the analysis code and figures for the publication listed above. 
+1. BTN_1_ extracts the data and divides them into traces based on the timestamps saved by TDT.
+2. BTN_2_ sorts traces and combines them where necessary. It also performs z-scoring of the traces
+3. BTN_3_ The main plotting scripts. The collect the relevant data for a given trial type, performs the statistics, and plots these as output
+4. BTN_4_ Calculates mean of the zScore traces in defined time windows
