@@ -1,15 +1,15 @@
 %% Nathan Marchant May 2025
 % Written for Pavlovian conflict task
-% --- MODIFIED: Added flexible grouping for first and final sessions ---
-% --- MODIFIED: Integrated bootstrapping tests into plotting function ---
-% --- MODIFIED: Stored permutation tests in a named struct ---
-% --- MODIFIED: Added struct output for significance windows ---
+% Includes: flexible grouping for first and final sessions ---
+% Includes: Integrated bootstrapping tests into plotting function ---
+% Includes: Stored permutation tests in a named struct ---
+% Includes: output for significance windows ---
 
 % --- Initialization ---
 clear all;
 close all; % Good practice to close figures
 
-% --- MODIFIED: Define which sessions to group together ---
+%% ---  Define which sessions to group together ---
 % List the session names you want to pool for the "first" group
 first_sessions = {'retrain_1', 'retrain_2'}; 
 % List the session names for the "final" group for most rats
@@ -23,7 +23,7 @@ dataFolder = 'C:\Photometry\PavConf\DrPhotom_Extracted\Alcohol conditioning V4 p
 files = dir(fullfile(dataFolder, '*.mat'));
 fprintf('Found %d data files in: %s\n', length(files), dataFolder);
 
-% --- MODIFIED: Initialize data matrices for first and final sessions ---
+% --- Initialize data matrices for first and final sessions ---
 CSP_first = []; CSM_first = [];
 CSP_final = []; CSM_final = [];
 
@@ -207,7 +207,7 @@ function create_comparison_plot(data1, data2, btsrp1, btsrp2, perm_test_result, 
     box on; hold off;
 end
 
-%% ----------------- NEW: Helper Function for Windows -----------------
+%% ----------------- Helper Function for Significance Windows -----------------
 function windows = find_sig_windows(indices, time_vector)
     % Takes a vector of significant indices and returns a struct array 
     % with the start and end times of each contiguous window.

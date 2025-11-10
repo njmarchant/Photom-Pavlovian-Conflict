@@ -1,13 +1,12 @@
 %% Nathan Marchant May 2025
 % Written for Pavlovian conflict task
-% --- MODIFIED: Re-introduced flexible session grouping for early/late comparisons ---
-% --- MODIFIED: Reverted to explicit plotting blocks to fix legend errors ---
+
 
 % --- Initialization ---
 clear all;
 close all; % Good practice to close figures
 
-% --- MODIFIED: Define session groups ---
+% --- Define session groups ---
 % List the session names to pool for the "early" and "late" groups.
 early_sessions = {'shock_1', 'shock_2'};
 late_sessions = {'shock_3', 'shock_4'};
@@ -17,7 +16,7 @@ dataFolder = 'C:\Photometry\PavConf\DrPhotom_Extracted\Alcohol conditioning V4 p
 files = dir(fullfile(dataFolder, '*.mat'));
 fprintf('Found %d data files in: %s\n', length(files), dataFolder);
 
-% --- MODIFIED: Initialize data matrices for each condition and session group ---
+% --- Initialize data matrices for each condition and session group ---
 CSP_no_shock_early = []; CSP_shock_early = []; CSM_early = [];
 CSP_no_shock_late = [];  CSP_shock_late = [];  CSM_late = [];
 

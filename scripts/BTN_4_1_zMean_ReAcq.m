@@ -11,7 +11,7 @@ clear all;
 % Define the folder containing your individual session .mat files
 dataFolder = 'C:\Photometry\PavConf\DrPhotom_Extracted\Alcohol conditioning V4 photometry';
 
-% --- MODIFIED: Define which sessions to group together ---
+% --- Define which sessions to group together ---
 % List the session names you want to pool for the "first" group
 first_sessions = {'retrain_1', 'retrain_2'};
 % List the session names for the "final" group for most rats

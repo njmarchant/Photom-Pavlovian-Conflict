@@ -1,6 +1,6 @@
 %% Nathan Marchant May 2025
 % Written for Pavlovian conflict task
-% MODIFIED to plot individual subject traces for each cue type.
+% Includes: plot individual subject traces for each cue type.
 
 % --- Initialization ---
 clear all;

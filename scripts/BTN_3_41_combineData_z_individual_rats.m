@@ -1,7 +1,7 @@
 %% Nathan Marchant May 2025
 % Written for Pavlovian conflict task
-% --- MODIFIED: Plots individual rat averages instead of grand average ---
-% --- MODIFIED: Statistical tests (bootstrap, permutation) have been removed ---
+% Includes: Plots individual rat averages instead of grand average ---
+
 
 % --- Initialization ---
 clear all;

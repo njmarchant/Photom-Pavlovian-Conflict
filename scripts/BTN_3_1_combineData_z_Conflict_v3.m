@@ -1,8 +1,5 @@
 %% Nathan Marchant May 2025
 % Written for Pavlovian conflict task
-% --- MODIFIED: Now handles 'early' and 'late' session analysis ---
-% --- MODIFIED: Plots early and late sessions separately ---
-% --- MODIFIED: Plots a direct comparison of early vs. late for each cue type ---
 
 %% --- Initialization and Setup ---
 clear all;

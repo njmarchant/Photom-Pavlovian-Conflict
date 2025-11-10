@@ -1,14 +1,11 @@
 %% Nathan Marchant May 2025
 % Written for Pavlovian conflict task
-% --- MODIFIED: Now loads and collates data from all .mat files in a folder ---
-% --- MODIFIED: Added handling for NaN values ---
-% --- MODIFIED: Added data source tracking and outlier removal based on mean value ---
 
 % --- Initialization ---
 clear all;
 close all; % Good practice to close figures
 
-% --- MODIFIED: Define the folder containing your extracted .mat files ---
+% --- Define the folder containing your extracted .mat files ---
 dataFolder = 'C:\Photometry\PavConf\Conflict_Extracted\Pavlovian conditioning conflict'; % <--- SET YOUR FOLDER PATH HERE
 files = dir(fullfile(dataFolder, '*.mat')); % Get a list of all .mat files
 fprintf('Found %d data files in: %s\n', length(files), dataFolder);
@@ -62,7 +59,7 @@ end
 fprintf('\nData collation complete.\n');
 
 
-% --- MODIFIED: Remove trials with extreme mean values ---
+% --- Remove trials with extreme mean values ---
 mean_csp = mean(CSP, 2);
 outlier_idx_csp = mean_csp > 20 | mean_csp < -20;
 if any(outlier_idx_csp)

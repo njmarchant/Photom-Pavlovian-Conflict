@@ -1,6 +1,6 @@
 %% Nathan Marchant May 2025
 % Written for Pavlovian conflict task
-% Phase 1 - reward
+
 
 % --- Initialization ---
 clear all;
@@ -28,28 +28,6 @@ CSP = []; % Initialize outside
 CSM = []; % Initialize outside
 CSPun = []; % Initialize outside
 
-% for i = 1:length(alldata)
-%      currentRow = alldata(i);
-%      if isfield(currentRow, 'phase') && strcmp(currentRow.phase, PHASE_TO_ANALYZE)
-%          csp_1 = currentRow.csp{1};
-%          csp_2 = currentRow.csp{2};
-%          csp_3 = currentRow.csp{3};
-%          csp_4 = currentRow.csp{4};
-%          CSP = [CSP;csp_1; csp_2;csp_3; csp_4];
-% 
-%          csm_1 = currentRow.csm{1};
-%          csm_2 = currentRow.csm{2};
-%          csm_3 = currentRow.csm{3};
-%          csm_4 = currentRow.csm{4};
-%          CSM = [CSM;csm_1; csm_2;csm_3; csm_4];
-% 
-%          cspun_1 = currentRow.cspun{1};
-%          cspun_2 = currentRow.cspun{2};
-%          cspun_3 = currentRow.cspun{3};
-%          cspun_4 = currentRow.cspun{4};
-%          CSPun = [CSPun;cspun_1; cspun_2; cspun_3; cspun_4];            
-%      end
-% end
 
 for i = 1:length(alldata)
      currentRow = alldata(i);

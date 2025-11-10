@@ -1,12 +1,12 @@
 %% Nathan Marchant May 2025
 % Written for Pavlovian conflict task
-% --- MODIFIED: Now loads and collates data from all .mat files in a folder ---
+% --- loads and collates data from all .mat files in a folder ---
 
 % --- Initialization ---
 clear all;
 close all; % Good practice to close figures
 
-% --- MODIFIED: Define the folder containing your extracted .mat files ---
+% --- Define the folder containing your extracted .mat files ---
 dataFolder = 'C:\Photometry\PavConf\Photom_raw\Pavlovian conditioning discrimination training'; % <--- SET YOUR FOLDER PATH HERE
 files = dir(fullfile(dataFolder, '*.mat')); % Get a list of all .mat files
 fprintf('Found %d data files in: %s\n', length(files), dataFolder);
@@ -48,7 +48,7 @@ for k = 1:length(files)
     
     clear sesdat; % Clear sesdat to prevent data carry-over
 end
-% --- MODIFIED: Handle NaN values ---
+
 % Remove any rows from the matrices that contain NaN values to prevent errors in stats/plotting.
 nan_rows_csp = any(isnan(CSP), 2);
 if any(nan_rows_csp)

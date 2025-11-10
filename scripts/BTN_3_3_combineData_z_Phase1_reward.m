@@ -1,7 +1,7 @@
 %% Nathan Marchant May 2025
 % Written for Pavlovian conflict task
 % Phase 1 - reward
-% --- MODIFIED: Added automatic calculation of significance windows ---
+% Includes: automatic calculation of significance windows ---
 
 % --- Initialization ---
 clear all;
@@ -77,7 +77,7 @@ perm = struct();
 [perm.rewE_rewL, ~] = permTest_array(EarlyCSP, LateCSP, 1000);
 fprintf('Statistical tests complete.\n');
 
-% --- NEW: Calculate and Store Significance Windows ---
+% --- Calculate and Store Significance Windows ---
 fprintf('\nCalculating significance windows...\n');
 % Define Significance Parameters
 p = 0.01;    % p-value for permutation test
@@ -200,7 +200,7 @@ line([20, 20], yLimits, 'Color', 'black', 'HandleVisibility', 'off');
 title('CS+ All Trials');
 fprintf('Plotting complete.\n');
 
-%% ----------------- NEW: Helper Function for Windows -----------------
+%% ----------------- Helper Function for Signficance Windows -----------------
 function windows = find_sig_windows(indices, time_vector)
     % Takes a vector of significant indices and returns a struct array 
     % with the start and end times of each contiguous window.
